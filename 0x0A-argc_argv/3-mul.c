@@ -17,16 +17,16 @@ int d = 0;
 
 int n = 0;
 
-int len = 0;
+int l = 0;
 
 int f = 0;
 
 int digit = 0;
 
-	while (s[len] != '\0')
-		len++;
+	while (s[l] != '\0')
+		l++;
 
-	while (i < len && f == 0)
+	while (i < l && f == 0)
 	{
 		if (s[i] == '-')
 			++d;
