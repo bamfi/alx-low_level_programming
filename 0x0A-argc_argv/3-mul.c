@@ -40,31 +40,26 @@ int digit = 0;
 			if (s[i + 1] < '0' || s[i + 1] > '9')
 				break;
 			f = 0;
-		}
-		i++;	
+		} i++;	
 	}
 	if (f == 0)
-		return (0);
-return (n);		
+	return (0);
+    return (n);		
 }
 
 /**
  * main - multiplies two numbers
  * @argc: number of arguments
- *
  * @argv: array of arguments		
- *
  * Return: 0 (Success), 1 (Error)
- *
  */
 int main(int argc, char *argv[])		
 {
 	int result, num1, num2;
-
 	if (argc < 3 || argc > 3)	
 	{
-		printf("Error\n");
-		return (1);	
+	printf("Error\n");
+	return (1);	
 	}
 	num1 = _atoi(argv[1]);
 	num2 = _atoi(argv[2]);
