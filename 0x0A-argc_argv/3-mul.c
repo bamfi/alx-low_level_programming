@@ -56,8 +56,7 @@ int digit = 0;
  */
 int main(int argc, char *argv[])
 {
-	int result, num1, num2;
-	
+int result, num1, num2;
 	if (argc < 3 || argc > 3)
 	{
 		printf("Error\n");
