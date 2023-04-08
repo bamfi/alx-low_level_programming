@@ -3,12 +3,12 @@
 #include <ctype.h>
 #include <string.h>
 /**
-* check_num - check string if it s a digit
+* check_nm - check string if it s a digit
 * @str: array str
 *
 * Return: Always 0 (Success)
 */
-int check_num(char *str)
+int check_nm(char *str)
 {
 /*Declaring variables*/
 	unsigned int count;
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 	count = 1;
 	while (count < argc) /* goes through the array*/
 	{
-		if (check_num(argv[count]))
+		if (check_nm(argv[count]))
 
 		{
 			str_to_int = atoi(argv[count]); /* atoi  convert string to integer*/
