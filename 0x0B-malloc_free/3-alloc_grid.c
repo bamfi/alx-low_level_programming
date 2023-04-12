@@ -1,9 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * FILE: 3-alloc_grid.c
- * Auth: firdaous
- * alloc_grid - Returns a pointer to a 2 dimensional array of integers.
+ * alloc_grid -Returns a pointer to a 2 dimensional array of integers.
  * @width: width input
  * @height: height input
  * Return: pointer to 2 dim. arraj
