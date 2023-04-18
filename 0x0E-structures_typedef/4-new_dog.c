@@ -10,7 +10,7 @@
 * Return: pointer to new dog
 */
 
-dog_t *new_d(char *name, float age, char *owner)
+dog_t *new_dog(char *name, float age, char *owner)
 {
 unsigned int l1, l2, i;
 dog_t *dog;
