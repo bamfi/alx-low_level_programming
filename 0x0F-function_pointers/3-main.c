@@ -3,41 +3,33 @@
 #include <stdio.h>
 #include "3-calc.h"
 /**
- * main - Prints the result of simple operations.
- * @argc: The number of arguments supplied to the program.
+ * main - Prints the result of  operations.
+ * @argc: The number of arguments.
  * @argv: An array of pointers to the arguments.
  *
  * Return: Always 0.
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	int n1, n2;
-	char *ope;
+char *op;
+if (argc != 4)
+{
+	printf("Error\n");
+	exit(98);
+}
+op = argv[2];
+if (get_op_func(op) == NULL || op[1] != '\0')
+{
+	printf("Error\n");
+	exit(99);
+}
 
-	if (argc != 4)
-	{
-		printf("Error\n");
-		exit(98);
-	}
-
-	n1 = atoi(argv[1]);
-	ope = argv[2];
-	n2 = atoi(argv[3]);
-
-	if (get_op_func(ope) == NULL || ope[1] != '\0')
-	{
-		printf("Error found\n");
-		exit(99);
-	}
-
-	if ((*ope == '/' && n2 == 0) ||
-	    (*ope == '%' && n2 == 0))
-	{
-		printf("Error found\n");
-		exit(100);
-	}
-
-	printf("%d\n", get_op_func(ope)(n1, n2));
-
-	return (0);
+if ((*op == '/' && (atoi(argv[3])) == 0) ||
+(*op == '%' && (atoi(argv[3])) == 0))
+{
+	printf("Error\n");
+	exit(100);
+}
+printf("%d\n", get_op_func(op)((atoi(argv[1])), (atoi(argv[3]))));
+return (0);
 }
