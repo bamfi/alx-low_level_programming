@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, " cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
 		if (from == -1 || rd == -1)
 		{
 			dprintf(STDERR_FILENO,
-				"Error: Can not read from file %s\n", argv[1]);
+				"Error: Can't read from file %s\n", argv[1]);
 			free(buffer);
 			exit(98);
 		}
